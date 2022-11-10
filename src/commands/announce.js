@@ -17,7 +17,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -39,7 +39,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -51,7 +51,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -94,7 +94,7 @@ if (Array.isArray(userProducts)) {
         const embed = util.getEmbedTemplate(
           client,
           "error",
-          "no one owns this"
+          "no one owns this :("
         );
         return interaction.followUp({ embeds: [embed], ephemeral: true });
       }
@@ -106,13 +106,13 @@ if (Array.isArray(userProducts)) {
         const announcementEmbed = new Discord.MessageEmbed()
           .setTitle("Product Announcement")
           .setDescription(
-            `Hi, ${userToAnnounce.username}! \nI have an announcement for you`
+            `Howdy, ${userToAnnounce.username}! \nwe have an announcement for you`
           )
           .addField("Message", messageToAnnounce, false)
           .addField("Product", productExists.name, true)
           .addField("Server", interaction.guild.name, true)
           .setThumbnail(
-            "https://cdn.discordapp.com/emojis/749062670069530655.png?size=96"
+            "https://media.discordapp.net/attachments/995493103039414312/1026406146807975987/326031.png"
           )
           .setColor(util.getColor("primary"))
           .setFooter({
@@ -158,7 +158,7 @@ module.exports.requiredPermission = "ADMINISTRATOR"
 
 module.exports.info = {
   name: "announce",
-  description: "Sends a message to all users that own the provided product.",
+  description: "Sends a message to users that own the provided product.",
   options: [
     {
       type: 3,
@@ -171,7 +171,7 @@ module.exports.info = {
       type: 3,
       name: "message",
       description:
-        "Message to send in the announcement. Can not be more than 1024 characters.",
+        "Message to send in the announcement. (1024 characters max.)",
       required: true,
     },
   ],

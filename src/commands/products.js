@@ -17,7 +17,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -39,7 +39,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -51,7 +51,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -71,24 +71,41 @@ if (Array.isArray(userProducts)) {
           }
         } else return ""
       } else return ""
+
+      function productID(product) {
+        console.log(product.id)
+              return " (${product.id})"
+            }
     }
 
+    const productidtrue = interaction.options.getString("name");
+    const Group = await db.get(`hubs/${interaction.guild.id}/group`)
     const checkProduct = await db.get(`hubs/${interaction.guild.id}/products`)
     console.log(checkProduct)
     if (Array.isArray(checkProduct)) {
-      const productListEmbed = new Discord.MessageEmbed()
-        .setTitle('Products')
-        .setDescription(
-          checkProduct.map(product => `- ${product.name}${productStock(product)}`).join('\n')
+      const axios = require("axios");
+      await axios
+        .get(
+          `https://thumbnails.roblox.com/v1/groups/icons?groupIds=${Group.id}&size=150x150&format=Png&isCircular=false`
         )
+        .then(async (res) => {
+      const productListEmbed = new Discord.MessageEmbed()
+        .setTitle('Available Products')
+        .setThumbnail(res?.data?.data[0]?.imageUrl || null)
+        .setDescription(`**Hub-ID**
+        \`${interaction.guild.id}\`
+        
+        **Products**
+        ${checkProduct.map(product => `- **${product.name}** ${productStock(product)}`).join('\n')}`)
         .addField('Total Products', checkProduct.length.toString(), true)
         .setColor(util.getColor("primary"))
       return interaction.editReply({
         embeds: [productListEmbed]
       })
+    })
     } else {
       
-      return interaction.editReply({ embeds: [util.getEmbedTemplate(client, "error", "No products found.")], ephemeral: true })
+      return interaction.editReply({ embeds: [util.getEmbedTemplate(client, "error", "No products found. Smells dusty in here!")], ephemeral: true })
     }
   } catch (e) {
     clientLogger.error(e)

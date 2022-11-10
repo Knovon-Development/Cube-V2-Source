@@ -19,7 +19,7 @@ module.exports.run = async (client, interaction, logError) => {
                     getEmbedTemplate(
                         client,
                         "error",
-                        "Server owner does not own a Hub whitelist"
+                        "The server owner doesn't own the hub!"
                     ),
                 ],
                 ephemeral: true,
@@ -41,7 +41,7 @@ module.exports.run = async (client, interaction, logError) => {
                         getEmbedTemplate(
                             client,
                             "error",
-                            "Server owner does not own a Hub Whitelist"
+                            "The server owner doesn't own the hub!"
                         ),
                     ],
                     ephemeral: true,
@@ -53,7 +53,7 @@ module.exports.run = async (client, interaction, logError) => {
                     getEmbedTemplate(
                         client,
                         "error",
-                        "Server owner does not own a Hub Whitelist"
+                        "The server owner doesn't own the hub!"
                     ),
                 ],
                 ephemeral: true,
@@ -95,7 +95,7 @@ module.exports.run = async (client, interaction, logError) => {
           api: secret
         });
        
-        const completedSetup = util.getEmbedTemplate(client, "success", "Configuration Updated!", `Configuration has been changed. The new API key is: ||${secret}||\n**Do not share it, even with your dog!**`)
+        const completedSetup = util.getEmbedTemplate(client, "success", "Configuration Updated!", `Configuration has been changed. The new API key is: ||${secret}||\n**Do not share it, even with your gold fish's dog!!**`)
 
         return interaction.followUp({
           embeds: [completedSetup],
@@ -123,6 +123,6 @@ module.exports.run = async (client, interaction, logError) => {
 module.exports.requiredPermission = "ADMINISTRATOR"
 
 module.exports.info = {
-  name: "regen",
+  name: "regen-apikey",
   description: "Regenerate the API Key.",
 };

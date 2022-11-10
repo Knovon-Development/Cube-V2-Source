@@ -33,7 +33,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -55,7 +55,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -67,7 +67,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -98,7 +98,7 @@ if (Array.isArray(userProducts)) {
       if (interaction.options.getString("description")) {
         if (
           interaction.options.getString("description").length > 100 ||
-          interaction.options.getString("description").length < 20
+          interaction.options.getString("description").length < 5
         ) {
           if (
             (await db.get(`hubs/${interaction.guild.id}`).experimentsEnabled) ==
@@ -106,12 +106,12 @@ if (Array.isArray(userProducts)) {
           ) {
             if (
               interaction.options.getString("description").length > 400 ||
-              interaction.options.getString("description").length < 20
+              interaction.options.getString("description").length < 5
             ) {
               const embed = util.getEmbedTemplate(
                 client,
                 "error",
-                "Description must be less than 400 characters, and more than 20 characters."
+                "Description must be less than 400 characters, and more than 5 characters."
               );
               return interaction.followUp({ embeds: [embed] });
             }
@@ -119,7 +119,7 @@ if (Array.isArray(userProducts)) {
             const embed = util.getEmbedTemplate(
               client,
               "error",
-              "Description must be less than 100 characters, and more than 20 characters."
+              "Description must be less than 100 characters, and more than 5 characters."
             );
             return interaction.followUp({ embeds: [embed] });
           }
@@ -149,7 +149,7 @@ if (Array.isArray(userProducts)) {
       const productFileEmbed = new Discord.MessageEmbed()
         .setTitle("Product File")
         .setDescription(
-          "Please upload the Product File, Text or URL that you want to deliver when a product is bought"
+          "Please upload a product file to be sent automatically once the product is purchase!"
         )
         .setColor(util.getColor("primary"));
       interaction.followUp({ embeds: [productFileEmbed] });
@@ -294,7 +294,7 @@ if (Array.isArray(userProducts)) {
 module.exports.requiredPermission = "ADMINISTRATOR"
 
 module.exports.info = {
-  name: "createproduct",
+  name: "productcreate",
   description: "create a product",
   options: [
      {

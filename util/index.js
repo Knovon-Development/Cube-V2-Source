@@ -6,9 +6,9 @@ randomString = function(count) {
 }
 
 getIcon = function(type) {
-    if (type.toLowerCase() === "error") return "https://i.imgur.com/sNJadfA.png"
-    if (type.toLowerCase() === "success") return "https://i.imgur.com/8KIyqYO.png"
-    if (type.toLowerCase() === "warning") return "https://i.imgur.com/Hpr2MQi.png"
+    if (type.toLowerCase() === "error") return "https://media.discordapp.net/attachments/995493103039414312/1027155265864351744/5765_Offline.png"
+    if (type.toLowerCase() === "success") return "https://media.discordapp.net/attachments/995493103039414312/1027155264975147030/image0-5.png"
+    if (type.toLowerCase() === "warning") return "https://media.discordapp.net/attachments/995493103039414312/1027155265491058688/5505-idle-status.png"
 }
 
 getColor = function(type) {

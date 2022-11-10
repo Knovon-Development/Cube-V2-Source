@@ -33,7 +33,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -55,7 +55,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -67,7 +67,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -125,7 +125,7 @@ try {
       const embed = util.getEmbedTemplate(
         client,
         "warning",
-        "Are you sure you want to delete this product? This is not reversableand all product settings, license owners, etc. will be lost."
+        "Are you sure you want to do this all data will be permanently deleted from our database, this includes the product files licsenses and if whitelisted the product may not function!"
       );
       interaction.followUp({
         embeds: [embed],
@@ -147,7 +147,7 @@ try {
               util.getEmbedTemplate(
                 client,
                 "error",
-                "Product Deletion has been cancelled."
+                "Product Deletion has been cancelled. :)"
               ),
             ],
             components: [],
@@ -184,7 +184,7 @@ try {
 module.exports.requiredPermission = "ADMINISTRATOR"
 
 module.exports.info = {
-  name: "deleteproduct",
+  name: "productdelete",
   description: "delete a product",
   options: [
 {

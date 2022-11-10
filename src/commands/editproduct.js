@@ -33,7 +33,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -55,7 +55,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -67,7 +67,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -91,7 +91,7 @@ if (Array.isArray(userProducts)) {
               util.getEmbedTemplate(
                 client,
                 "error",
-                "We searched far and wide, but we couldn't find that product"
+                "We've searched our database and swept the cornors and still couldn't find your product."
               ),
             ],
             ephemeral: true,
@@ -378,14 +378,14 @@ if (Array.isArray(userProducts)) {
           updated = true;
           if (
             interaction.options.getString("description").length > 100 ||
-            interaction.options.getString("description").length < 20
+            interaction.options.getString("description").length < 5
           ) {
             return interaction.followUp({
               embeds: [
                 util.getEmbedTemplate(
                   client,
                   "error",
-                  "Description must be less than 100 characters, and more than 20 characters."
+                  "Description must be less than 100 characters, and more than 5 characters."
                 ),
               ],
             });
@@ -427,7 +427,7 @@ if (Array.isArray(userProducts)) {
               client,
               "success",
               "Product Updated!",
-              `${productToEdit} has been successfuly updated.`
+              `${productToEdit} has been successfuly updated. (If you are updating the file upload a file it will automatically be updated!)`
             ),
           ],
         });
@@ -437,7 +437,7 @@ if (Array.isArray(userProducts)) {
             util.getEmbedTemplate(
               client,
               "error",
-              "There are no products to update, why are you even here?"
+              "There are no products to update, start developing!"
             ),
           ],
           ephemeral: true,
@@ -462,49 +462,49 @@ if (Array.isArray(userProducts)) {
 module.exports.requiredPermission = "ADMINISTRATOR"
 
 module.exports.info = {
-  name: "editproduct",
-  description: "edit a product",
-  options: [
-        {
-          type: 3,
-          name: "name",
-          description: "Name of the product you want to update.",
-          required: true,
-          autocomplete: true,
-        },
-        {
-          type: 3,
-          name: "description",
-          description: "What is your Hub's Description?",
-          required: false,
-        },
-        {
-          type: 4,
-          name: "stock",
-          description: "How much of the product do you want to sell?",
-        },
-        {
-          type: 4,
-          name: "developer-product",
-          description: "What is the product's Developer Product ID?",
-        },
-        {
-          type: 4,
-          name: "image",
-          description: "What is the ROBLOX Image Asset ID?",
-        },
-        {
-          type: 5,
-          name: "file",
-          description: "Do you want to update the file?",
-        },
-        {
-          type: 4,
-          name: "test-place-id",
-          description:
-            "Testing Place ID to the game. This will only work if the hub is set to game-link.",
-          required: false,
-        },
+  "name": "productedit",
+  "description": "product configuration",
+  "options": [
+            {
+              type: 3,
+              name: "name",
+              description: "Name of the product you want to update.",
+              required: true,
+              autocomplete: true,
+            },
+            {
+              type: 3,
+              name: "description",
+              description: "What is your Hub's Description?",
+              required: false,
+            },
+            {
+              type: 4,
+              name: "stock",
+              description: "How much of the product do you want to sell?",
+            },
+            {
+              type: 4,
+              name: "developer-product",
+              description: "What is the product's Developer Product ID?",
+            },
+            {
+              type: 4,
+              name: "image",
+              description: "What is the ROBLOX Image Asset ID?",
+            },
+            {
+              type: 5,
+              name: "file",
+              description: "Do you want to update the file?",
+            },
+            {
+              type: 4,
+              name: "test-place-id",
+              description:
+                "Testing Place ID to the game. This will only work if the hub is set to game-link.",
+              required: false,
+            },
   ],
 };
 

@@ -26,7 +26,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -48,7 +48,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -60,7 +60,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -73,7 +73,7 @@ if (Array.isArray(userProducts)) {
           const embed = util.getEmbedTemplate(
             client,
             "error",
-            "Hub not setup"
+            "Looks like your hub isn't set up!"
           );
           return interaction.followUp({ embeds: [embed], ephemeral: true });
         }

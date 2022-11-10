@@ -17,7 +17,7 @@ module.exports = async (client) => {
     client.user.setPresence({
       activities: [
         {
-          name: `over ${client.guilds.cache.size + 1} Hub(s)`,
+          name: `over ${client.guilds.cache.size +1} Hub(s)`,
           type: "WATCHING",
         },
       ],

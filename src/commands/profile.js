@@ -18,7 +18,7 @@ if (!checkUser) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -40,7 +40,7 @@ if (Array.isArray(userProducts)) {
                 getEmbedTemplate(
                     client,
                     "error",
-                    "Server owner does not own a Hub Whitelist"
+                    "The server owner doesn't own the hub!"
                 ),
             ],
             ephemeral: true,
@@ -52,7 +52,7 @@ if (Array.isArray(userProducts)) {
             getEmbedTemplate(
                 client,
                 "error",
-                "Server owner does not own a Hub Whitelist"
+                "The server owner doesn't own the hub!"
             ),
         ],
         ephemeral: true,
@@ -65,7 +65,7 @@ if (Array.isArray(userProducts)) {
 
     if (!user) {
       if (!(await db.has(`users/${interaction.user.id}/robloxId`))) {
-        const embed = util.getEmbedTemplate(client, "error", 'You need to link your ROBLOX account in order to use this command!')
+        const embed = util.getEmbedTemplate(client, "error", 'You need to link your OBLOX account in order to use this command!')
         return interaction.followUp({ embeds: [embed], ephemeral: true })
       }
 

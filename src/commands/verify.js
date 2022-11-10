@@ -19,7 +19,7 @@ module.exports.run = async (client, interaction, logError) => {
         {
           headers: {
             "api-key":
-              "a14bb5a8-0b8c-474a-9b5c-d692810a2cccc53e154b-8aaa-4998-a4bd-a10ec687adb1918bd8b0-7406-48bc-984a-b047ca028700",
+              "b5b22987-254a-4400-9e9b-73130c90d292",
           },
         }
       );

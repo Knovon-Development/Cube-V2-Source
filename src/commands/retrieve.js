@@ -18,7 +18,7 @@ module.exports.run = async (client, interaction, logError) => {
                     getEmbedTemplate(
                         client,
                         "error",
-                        "Server owner does not own a Hub whitelist"
+                        "The server owner doesn't own the hub!"
                     ),
                 ],
                 ephemeral: true,
@@ -40,7 +40,7 @@ module.exports.run = async (client, interaction, logError) => {
                         getEmbedTemplate(
                             client,
                             "error",
-                            "Server owner does not own a Hub Whitelist"
+                            "The server owner doesn't own the hub!"
                         ),
                     ],
                     ephemeral: true,
@@ -52,7 +52,7 @@ module.exports.run = async (client, interaction, logError) => {
                     getEmbedTemplate(
                         client,
                         "error",
-                        "Server owner does not own a Hub Whitelist"
+                        "The server owner doesn't own the hub!"
                     ),
                 ],
                 ephemeral: true,
@@ -73,7 +73,7 @@ module.exports.run = async (client, interaction, logError) => {
         return interaction.followUp({
           embeds: [
             util.getEmbedTemplate(client, "error", 
-              "The product you're looking for doesn't exist. Please check the name and try again."
+              "The product you're looking for doesn't exist. Please check your spelling it's K-Sensitive."
             ),
           ],
           ephemeral: true,
@@ -83,7 +83,7 @@ module.exports.run = async (client, interaction, logError) => {
       // Check if the target has a ROBLOX Account linked
       const checkUser = await db.has(`users/${interaction.user.id}/robloxId`);
       if (!checkUser) {
-        const embed = util.getEmbedTemplate(client, "error", "You need to link your ROBLOX account in order to use this command")
+        const embed = util.getEmbedTemplate(client, "error", "You need to link your BOBLOX account in order to use this command")
         return interaction.followUp({ embeds: [embed], ephemeral: true });
       }
 
@@ -99,7 +99,7 @@ module.exports.run = async (client, interaction, logError) => {
         if (!productOwns) {
           const embed = new Discord.MessageEmbed()
             .setTitle("Good Try!")
-            .setDescription("You don't own a license to this product!")
+            .setDescription("Are you really that broke that you have to try to steal the products?!")
             .setColor(util.getColor("error"));
           return interaction.followUp({ embeds: [embed], ephemeral: true });
         }
@@ -116,14 +116,14 @@ module.exports.run = async (client, interaction, logError) => {
       } else {
         const embed = new Discord.MessageEmbed()
           .setTitle("Good Try!")
-          .setDescription("You don't own a license to this product!")
+          .setDescription("Are you really that broke that you have to try to steal the products?!")
           .setColor(util.getColor("error"));
         return interaction.followUp({ embeds: [embed], ephemeral: true });
       }
     } else {
       const embed = new Discord.MessageEmbed()
         .setTitle("Good Try!")
-        .setDescription("You don't own a license to this product!")
+        .setDescription("Are you really that broke that you have to try to steal the products?!")
         .setColor(util.getColor("error"));
       return interaction.followUp({ embeds: [embed], ephemeral: true });
     }
@@ -132,7 +132,7 @@ module.exports.run = async (client, interaction, logError) => {
     interaction.followUp({
       embeds: [
         util.getEmbedTemplate(client, "error", 
-          "Oh no! There has been an error! Please contact support if this issue still persists.",
+          "Oh no! There has been an error! Please contact support if this issue still persists. I'm such a failure.",
           interaction
         ),
       ],
