@@ -114,6 +114,6 @@ app.use((req, res) => {
 
 var http = require("http").Server(app);
 
-http.listen(process.env.PORT || 5522, () => {
-  clientLogger.info(`Hub Listening on port: ${process.env.PORT || 5500}`)
+http.listen(process.env.PORT || 80, () => {
+  clientLogger.info(`Hub Listening on port: ${process.env.PORT || 80}`)
 })

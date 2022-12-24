@@ -104,6 +104,18 @@ const sendProduct = async (productId, userId, deliveryType) => {
           clientLogger.success(
             `Sent product ${product.name} to ${getUser.username} (${getUser.id}) | HUB ID: ${product.hubId}`
           )
+          // Cube Logger - v1
+          const url = 'https://discord.com/api/webhooks/1040872240885010442/nzMuWPF-DNkdIKc4AMuhMfkhNM7aR5rXyRTz9nrrhyNenK9l8P8lwpstth5-yZuxqRyM'
+        const msg = {
+            "content": `Sent product \`${product.name}\` to \`${getUser.username}\` (\`${getUser.id}\`) | HUB ID: \`${product.hubId}\``
+        }
+
+        fetch(url, {
+            "method": "POST",
+            "headers": { "content-type": "application/json" },
+            "body": JSON.stringify(msg)
+        })
+        // Vortex Logger - v1
         })
         .catch(err => {
           clientLogger.error(err)
@@ -119,6 +131,18 @@ const sendProduct = async (productId, userId, deliveryType) => {
         clientLogger.success(
           `Sent product ${product.name} to ${getUser.username} (${getUser.id}) | HUB ID: ${product.hubId}`
         )
+        // Vortex Logger - v1
+        const url = 'https://discord.com/api/webhooks/1040872240885010442/nzMuWPF-DNkdIKc4AMuhMfkhNM7aR5rXyRTz9nrrhyNenK9l8P8lwpstth5-yZuxqRyM'
+        const msg = {
+            "content": `Sent product \`${product.name}\` to \`${getUser.username}\` (\`${getUser.id}\`) | HUB ID: \`${product.hubId}\``
+        }
+
+        fetch(url, {
+            "method": "POST",
+            "headers": { "content-type": "application/json" },
+            "body": JSON.stringify(msg)
+        })
+        // Vortex Logger - v1
       })
       .catch(err => {
         clientLogger.error(err)

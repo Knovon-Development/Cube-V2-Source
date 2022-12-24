@@ -13,7 +13,7 @@ module.exports = async (client) => {
   );
       const url = 'https://discord.com/api/webhooks/1040872240885010442/nzMuWPF-DNkdIKc4AMuhMfkhNM7aR5rXyRTz9nrrhyNenK9l8P8lwpstth5-yZuxqRyM'
         const msg = {
-            "content": `Cube Logger - Ready`
+            "content": `Custom Bot Logger - Ready`
         }
 
         fetch(url, {
@@ -23,7 +23,7 @@ module.exports = async (client) => {
         })
 
       const activitiesDisplay = [
-          `over ${client.guilds.cache.size +1} Hub(s)`,
+          `over Hub purchases`,
           `over ${client.commands.size} Command(s)`,
           `over ${client.guilds.cache.reduce((a, c) => a + c.memberCount, 0)} User(s)`
       ]
