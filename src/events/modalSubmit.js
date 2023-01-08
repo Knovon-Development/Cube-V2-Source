@@ -379,7 +379,7 @@ module.exports = async (client, modal) => {
 
 
 const fs = require('fs');
-const util = require('/root/Hub-main/util')
+const util = require('/root/Hub/util')
 const Discord = require('discord.js');
 const dClient = new Discord.Client({
     intents: [
@@ -395,8 +395,8 @@ discordModals(dClient);
 require('dotenv').config();
 
 // Roblox
-require('/root/Hub-main/util/roblox')
-require('/root/Hub-main/http')
+require('/root/Hub/util/roblox')
+require('/root/Hub/http')
 
 //Attach to dClient
 dClient.wait = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -412,16 +412,16 @@ dClient.logError = async function(source, error) {
 }
 
 //Load modules
-if(fs.existsSync('/root/Hub-main/modules.js')){
-    require('/root/Hub-main/modules.js')(dClient)
+if(fs.existsSync('/root/Hub/modules.js')){
+    require('/root/Hub/modules.js')(dClient)
 }
 
 //Load events
-fs.readdir('/root/Hub-main/src/events(custombot)/', (_err, files) => {
+fs.readdir('/root/Hub/src/events(custombot)/', (_err, files) => {
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
         
-        const event = require(`/root/Hub-main/src/events(custombot)/${file}`);
+        const event = require(`/root/Hub/src/events(custombot)/${file}`);
         let eventName = file.split('.')[0];
 
         dClient.on(eventName, event.bind(null, dClient));
@@ -433,11 +433,11 @@ dClient.commands = new Discord.Collection();
 dClient.ownerCommands = new Discord.Collection();
 
 //Load commands
-fs.readdir('/root/Hub-main/src/commands(custombot)/', async (_err, files) => {
+fs.readdir('/root/Hub/src/commands(custombot)/', async (_err, files) => {
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
 
-        let props = require(`/root/Hub-main/src/commands(custombot)/${file}`);
+        let props = require(`/root/Hub/src/commands(custombot)/${file}`);
         let commandName = file.split('.')[0];
 
         dClient.commands.set(props.info.name, props);
