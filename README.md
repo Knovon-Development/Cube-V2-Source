@@ -1,5 +1,5 @@
 # Hub
-Cube Hub (Former Knovon Hub), icsCloud (Former Paper), and Summit Hub (Custom Cube Hub Bot) backup files.
+Cube Hub (Former Knovon Hub), icsCloud (Former Paper), and Summit Hub (Custom Cube Hub Bot) backup files (Removed).
 
 Run the following commands in your `Terminal/CMD Prompt`
 
