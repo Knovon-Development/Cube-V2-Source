@@ -1,12 +1,12 @@
 {
   "type": "service_account",
   "project_id": "knovon-hub",
-  "private_key_id": "a33c3cbb58e4c94008f229178b27bcd29b911e30",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD3d9PS2CzQ2ewZ\nJHgngFlQolXwhj28SLwNTpevtCGwKG448U9X4infMCYP9sMQc5maJ51GjujayqP/\nG+zlTR1Uzm4e8L7MAPv2VWR6e/RTQVFv7BS0kLooSEdUws3mGmioQScgAuh0XwBv\nYW9HKSXnRK+J2kVUmriX9voKfCrF0+KJGw3oD3LWHLJ7NNu/63tYIk9itg6L4PN+\ntr8M2CxY2fDLr7yOEB45boYVxpZLrLKWkMnGJCUvQNk5lSFtAw4+wsTY5KJEZWw2\noImGhMeyRR97UT/m//WNvm8isIs23Br0VDwO22MjaWSQwPWPkGx/4ov+phruo7Wb\nJFat4IqbAgMBAAECggEAJY42rtOmGtH0/dcmMZ8jBCoxZE2zFnJsBjxMUoVslrkk\nCm87V9PXqpU6NDJXkGptaqgiuv+wK0K/2FTgGD0iO5RnwOP581LI6i2JEKTkGN3G\nTU0k0pxOLBPVWMcxi9Sr17D/jjZIGcpbHLbK4PVH2SJNiNxU/jh21X/NRYRqJ1hV\nVs8jxEvdFGmegnAilKptAFn8iD2wGPZ3lTAD97BAeKoFRd7k3Dg4ecEFTFABv0pk\nr4Rv4CEcJEEZWbxyyKQ9nsU1MpKRzk410bFjxiAKBYe2sB7GXbo5zs2gzZNi8VWe\n8gxew7iJuPP3VCY4uLuulYCgkverDjnNTzYSiNgNTQKBgQD/Zqn+qqGRWsXZHWkZ\nE+eG7LoKDUgeH6mEpijCbdcg5nf3ZfAoqUlQiawPF77RBZN9M2AjuPSf2XTPKVkK\njgOxWhuaB69SuyeXN2sFNlwDhB6zcDTuTL0LRbfaDSir63KBvlO4mNNrcwH5YPTA\nrIbd8U6xLm6cwnVdD9rarc69tQKBgQD4DGaRmmsJFVd4BdCbiBzynoavWTmCAEJr\nE01l96HTgRwzVvYHHheGncsp1G6QUN3mt5uewchJMbZ2cqIUz0Lypi3kezgFT6UW\nOAPOaYjX8SvwAmhI48VTy4nkwVc+5vrcO2dIcUhyPS5O/He6lTd3w6R8Fv+MMdjt\nvyEY4UHZDwKBgB6Ki1eN1gZIwZIGB1RdYflrg4/CKNaZWK8pI4Skl+4yQTRPd1mV\nbNP5sp6Xa1UZgpqdMyjybCZVXbeMLT6q3twtd1GDC78r7D8T/HNCHdy5xuYUS/AX\nMyAO9T5ZBn0Qib/kH6TaeaXGufy1UG9d8j7GJW/gqo+KXXiEddpioG9lAoGAAPMz\nNV2NCWTeh+Qlz2KvEbLPuz4xPTE5D+XsBvby1LeK3xt3J8HSvz49d/SLU9wrbWXI\nn8wIM1eQZlW8Dy5YCEvgox5hsYuDi1k9kn3O+1y+GVY5BgZxTAfciFbBOclyroM/\nuwRMDbv0QHMxFjLaGohSSfNgmS3bsdVokArU0LsCgYEAxPehy1465CtLttHlhEDu\n9hCa02sgHvRDbXrRu6GBQEGZ65bmCHKKLWtVN99JroNTiVOcKD7wAo9xysV/loBh\nMlkgZIlcJzBgjC+3JGkf46aB9hPaw9pBIk5ymi7DzG7lLvgdVh4nauZGpCBnro2w\nXu6AoETPuPMdBlV7jO8EMC4=\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-5v3wh@knovon-hub.iam.gserviceaccount.com",
-  "client_id": "116557239390597297848",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5v3wh%40knovon-hub.iam.gserviceaccount.com"
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
 }
